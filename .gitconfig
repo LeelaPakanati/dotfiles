@@ -1,0 +1,8 @@
+[user]
+	name = Leela Pakanati
+	email = leela.pakanati@arm.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
