@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/leepak01/Au'
 let g:netrw_dirhist_2='/home/leepak01/Au/Au'
 let g:netrw_dirhist_3='/home/leepak01/Au/Au/manager'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/home/leepak01/Au'
 let g:netrw_dirhist_5='/home/leepak01/Au/Au'
 let g:netrw_dirhist_6='/home/leepak01/Au/Au/datatypes'
 let g:netrw_dirhist_7='/home/leepak01/Au/Au/datatypes/fields'
+let g:netrw_dirhist_8='/home/lee/.vim'
+let g:netrw_dirhist_9='/home/lee'
