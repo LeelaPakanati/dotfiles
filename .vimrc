@@ -101,7 +101,7 @@ set background=dark " for the dark version
 " set background=light " for the light version
 colorscheme one
 set background=dark " for the dark version
-let g:airline_theme='one'
+#let g:airline_theme='one'
 
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum

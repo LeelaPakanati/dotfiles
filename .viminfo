@@ -298,7 +298,7 @@ $
 
 # Search String History (newest to oldest):
 ? @$
-|2,1,1567317854,,"@$"
+|2,1,1567370805,,"@$"
 ?/LEELA
 |2,1,1566948083,47,"LEELA"
 ?/stagin
@@ -481,36 +481,74 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
-	Released
-|3,1,0,0,1,0,1567317854,"Released"
-"1	LINE	0
-	* 
-|3,0,1,1,1,0,1566949470,"* "
-"2	LINE	0
-	* Refactor archive naming to define consistency: Meta = metadata folder, Archive = ids folder
-|3,0,2,1,1,0,1566949339,"* Refactor archive naming to define consistency: Meta = metadata folder, Archive = ids folder"
-"3	LINE	0
-	* Add schema documentation autogeneration
-|3,0,3,1,1,0,1566949337,"* Add schema documentation autogeneration"
-"4	LINE	0
-	* Implement return type of CustomProperty to use signature
-|3,0,4,1,1,0,1566949336,"* Implement return type of CustomProperty to use signature"
-"5	LINE	0
-	* Add API Functions for reserve and populate
-|3,0,5,1,1,0,1566949336,"* Add API Functions for reserve and populate"
-"6	LINE	0
-	* Resturcture Au modules for cleaner library structure
-|3,0,6,1,1,0,1566949336,"* Resturcture Au modules for cleaner library structure"
-"7	LINE	0
-	v0.2.1
-|3,0,7,1,1,0,1566949330,"v0.2.1"
-"8	LINE	0
+"0	LINE	0
+	alias jp2a='~/jp2a/src/jp2a'
+|3,0,0,1,1,0,1567370807,"alias jp2a='~/jp2a/src/jp2a'"
+""1	LINE	0
 	
-|3,0,8,1,1,0,1566949330,""
-"9	LINE	0
-	>>>>>>> Convert images
-|3,0,9,1,1,0,1566949281,">>>>>>> Convert images"
+|3,1,1,1,1,0,1567370922,""
+"2	LINE	0
+	
+|3,0,2,1,1,0,1567370915,""
+"3	BLOCK	27
+	.profile                    
+	.sudo_as_admin_successful   
+	.tmux.conf                  
+	.vim_mru_files              
+	.viminfo                    
+	.vimrc                      
+|3,0,3,2,6,27,1567370801,".profile                    ",".sudo_as_admin_successful   ",".tmux.conf                  ",".vim_mru_files              ",".viminfo                    ",".vimrc                      "
+"4	BLOCK	27
+	.vim.zip*                   
+	.xmodmap*                   
+	stonks.jpg*                 
+	think.jpg*                  
+	.bash_history               
+	.bashrc                     
+	.gitconfig                  
+|3,0,4,2,7,27,1567370801,".vim.zip*                   ",".xmodmap*                   ","stonks.jpg*                 ","think.jpg*                  ",".bash_history               ",".bashrc                     ",".gitconfig                  "
+"5	BLOCK	27
+	.profile                    
+	.sudo_as_admin_successful   
+	.tmux.conf                  
+	.vim_mru_files              
+	.viminfo                    
+	.vimrc                      
+|3,0,5,2,6,27,1567370796,".profile                    ",".sudo_as_admin_successful   ",".tmux.conf                  ",".vim_mru_files              ",".viminfo                    ",".vimrc                      "
+"6	BLOCK	27
+	.vim.zip*                   
+	.xmodmap*                   
+	stonks.jpg*                 
+	think.jpg*                  
+	.bash_history               
+	.bashrc                     
+	.gitconfig                  
+|3,0,6,2,7,27,1567370796,".vim.zip*                   ",".xmodmap*                   ","stonks.jpg*                 ","think.jpg*                  ",".bash_history               ",".bashrc                     ",".gitconfig                  "
+"7	BLOCK	27
+	.profile                    
+	.sudo_as_admin_successful   
+	.tmux.conf                  
+	.vim_mru_files              
+	.viminfo                    
+	.vimrc                      
+|3,0,7,2,6,27,1567370792,".profile                    ",".sudo_as_admin_successful   ",".tmux.conf                  ",".vim_mru_files              ",".viminfo                    ",".vimrc                      "
+"8	BLOCK	27
+	.vim.zip*                   
+	.xmodmap*                   
+	stonks.jpg*                 
+	think.jpg*                  
+	.bash_history               
+	.bashrc                     
+	.gitconfig                  
+|3,0,8,2,7,27,1567370792,".vim.zip*                   ",".xmodmap*                   ","stonks.jpg*                 ","think.jpg*                  ",".bash_history               ",".bashrc                     ",".gitconfig                  "
+"9	BLOCK	27
+	.profile                    
+	.sudo_as_admin_successful   
+	.tmux.conf                  
+	.vim_mru_files              
+	.viminfo                    
+	.vimrc                      
+|3,0,9,2,6,27,1567370791,".profile                    ",".sudo_as_admin_successful   ",".tmux.conf                  ",".vim_mru_files              ",".viminfo                    ",".vimrc                      "
 "k	CHAR	0
 	kkkkkiiii
 |3,0,20,0,1,0,0,"kkkkkiiii"
@@ -546,276 +584,236 @@ $
 |3,0,36,0,1,0,1566961382,"Released"
 
 # File marks:
-'0  1  0  ~/.giti
-|4,48,1,0,1567317878,"~/.giti"
-'1  13  0  ~/.vim
-|4,49,13,0,1567317869,"~/.vim"
-'2  3  0  ~/.xmodmap
-|4,50,3,0,1567317261,"~/.xmodmap"
-'3  1  86  ~/.ssh/id_rsa.pub
-|4,51,1,86,1566997564,"~/.ssh/id_rsa.pub"
-'4  41  22  ~/Au/Au/datatypes/fields/whitelists.py
-|4,52,41,22,1566961844,"~/Au/Au/datatypes/fields/whitelists.py"
-'5  1  0  /projects/pd/pj03221_cpu_perf/.meta/B2.json
-|4,53,1,0,1566961549,"/projects/pd/pj03221_cpu_perf/.meta/B2.json"
-'6  37  23  /projects/pd/pj03221_cpu_perf/.meta/B7.json
-|4,54,37,23,1566961386,"/projects/pd/pj03221_cpu_perf/.meta/B7.json"
-'7  1  0  /projects/pd/pj03221_cpu_perf/.meta/B2.json
-|4,55,1,0,1566961159,"/projects/pd/pj03221_cpu_perf/.meta/B2.json"
-'8  1  0  ~/.bashrc
-|4,56,1,0,1566959787,"~/.bashrc"
-'9  13  12  ~/.bashrc
-|4,57,13,12,1566959775,"~/.bashrc"
+'0  63  1  ~/.bashrc
+|4,48,63,1,1567371056,"~/.bashrc"
+'1  1  0  ~/.gitignore
+|4,49,1,0,1567370831,"~/.gitignore"
+'2  30  6  ~/.vimrc
+|4,50,30,6,1567370780,"~/.vimrc"
+'3  23  0  ~/.bashrc
+|4,51,23,0,1567318272,"~/.bashrc"
+'4  23  0  ~/.bashrc
+|4,52,23,0,1567318272,"~/.bashrc"
+'5  22  0  ~/.bashrc
+|4,53,22,0,1567318228,"~/.bashrc"
+'6  22  0  ~/.bashrc
+|4,54,22,0,1567318228,"~/.bashrc"
+'7  22  0  ~/.bashrc
+|4,55,22,0,1567318228,"~/.bashrc"
+'8  22  0  ~/.bashrc
+|4,56,22,0,1567318228,"~/.bashrc"
+'9  1  0  ~/.giti
+|4,57,1,0,1567317878,"~/.giti"
 
 # Jumplist (newest first):
--'  1  0  ~/.giti
-|4,39,1,0,1567317878,"~/.giti"
--'  13  0  ~/.vim
-|4,39,13,0,1567317869,"~/.vim"
--'  13  0  ~/.vim
-|4,39,13,0,1567317869,"~/.vim"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  3  0  ~/.xmodmap
-|4,39,3,0,1567317261,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  0  ~/.xmodmap
-|4,39,1,0,1567317230,"~/.xmodmap"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
--'  1  86  ~/.ssh/id_rsa.pub
-|4,39,1,86,1566997564,"~/.ssh/id_rsa.pub"
+-'  63  1  ~/.bashrc
+|4,39,63,1,1567371056,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567370909,"~/.bashrc"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1567370831,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1567370831,"~/.gitignore"
+-'  30  6  ~/.vimrc
+|4,39,30,6,1567370780,"~/.vimrc"
+-'  30  6  ~/.vimrc
+|4,39,30,6,1567370780,"~/.vimrc"
+-'  30  6  ~/.vimrc
+|4,39,30,6,1567370780,"~/.vimrc"
+-'  30  6  ~/.vimrc
+|4,39,30,6,1567370780,"~/.vimrc"
+-'  30  6  ~/.vimrc
+|4,39,30,6,1567370780,"~/.vimrc"
+-'  30  6  ~/.vimrc
+|4,39,30,6,1567370780,"~/.vimrc"
+-'  30  6  ~/.vimrc
+|4,39,30,6,1567370780,"~/.vimrc"
+-'  30  6  ~/.vimrc
+|4,39,30,6,1567370780,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567370726,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567370726,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567370726,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567370726,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567370726,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567370726,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567370726,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567370726,"~/.vimrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  23  0  ~/.bashrc
+|4,39,23,0,1567318272,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1567318268,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
+-'  22  0  ~/.bashrc
+|4,39,22,0,1567318228,"~/.bashrc"
 
 # History of marks within files (newest to oldest):
 
-> ~/.giti
-	*	1567317877	0
-	"	1	0
-
-> ~/.xmodmap
-	*	1567317259	0
-	"	3	0
-	^	3	1
-	.	3	1
-	+	3	1
-
-> ~/.ssh/id_rsa.pub
-	*	1566997563	0
-	"	1	86
-	^	1	3
-	.	1	0
-	+	1	0
-
-> ~/Au/Au/datatypes/fields/whitelists.py
-	*	1566961842	0
-	"	41	22
-
-> /projects/pd/pj03221_cpu_perf/.meta/B7.json
-	*	1566961385	0
-	"	37	23
-	^	37	24
-	.	37	23
-	+	2	0
-	+	11	13
-	+	20	23
-	+	37	23
-
-> /projects/pd/pj03221_cpu_perf/.meta/B2.json
-	*	1566961176	0
-	"	1	0
-
 > ~/.bashrc
-	*	1566959785	0
-	"	1	0
-	^	13	13
-	.	13	12
-	+	1	38
-	+	1	0
-	+	1	54
-	+	1	0
+	*	1567371056	0
+	"	63	1
+	^	24	0
+	.	62	0
 	+	1	37
 	+	1	28
 	+	1	32
@@ -873,31 +871,30 @@ $
 	+	2	0
 	+	4	40
 	+	5	31
-	+	43	27
-	+	43	23
-	+	35	63
+	+	44	27
+	+	44	23
+	+	36	63
+	+	44	0
 	+	43	0
-	+	42	0
-	+	34	0
-	+	45	0
-	+	34	33
-	+	42	0
-	+	34	0
-	+	34	12
-	+	34	0
-	+	34	6
-	+	34	0
-	+	34	1
-	+	34	0
+	+	35	0
+	+	46	0
+	+	35	33
+	+	43	0
+	+	35	0
+	+	35	12
+	+	35	0
+	+	35	6
+	+	35	0
+	+	35	1
+	+	35	0
 	+	5	31
 	+	1	0
-	+	34	3
-	+	35	23
-	+	34	0
+	+	35	3
+	+	36	23
+	+	35	0
 	+	1	0
 	+	1	24
-	+	77	0
-	+	80	0
+	+	78	0
 	+	81	0
 	+	82	0
 	+	83	0
@@ -906,9 +903,71 @@ $
 	+	86	0
 	+	87	0
 	+	88	0
-	+	77	32
+	+	89	0
+	+	78	32
 	+	12	21
 	+	13	12
+	+	22	0
+	+	23	0
+	+	24	0
+	+	25	0
+	+	26	0
+	+	28	0
+	+	62	0
+
+> ~/.gitignore
+	*	1567370830	0
+	"	1	0
+	^	1	1
+	.	1	0
+	+	1	0
+
+> /home/leepak01/Au/Au/datatypes/fields
+	*	1567370808	0
+	"	1	0
+
+> ~/.vimrc
+	*	1567370780	0
+	"	30	6
+	^	104	1
+	.	104	0
+	+	104	0
+
+> ~/.giti
+	*	1567317877	0
+	"	1	0
+
+> ~/.xmodmap
+	*	1567317259	0
+	"	3	0
+	^	3	1
+	.	3	1
+	+	3	1
+
+> ~/.ssh/id_rsa.pub
+	*	1566997563	0
+	"	1	86
+	^	1	3
+	.	1	0
+	+	1	0
+
+> ~/Au/Au/datatypes/fields/whitelists.py
+	*	1566961842	0
+	"	41	22
+
+> /projects/pd/pj03221_cpu_perf/.meta/B7.json
+	*	1566961385	0
+	"	37	23
+	^	37	24
+	.	37	23
+	+	2	0
+	+	11	13
+	+	20	23
+	+	37	23
+
+> /projects/pd/pj03221_cpu_perf/.meta/B2.json
+	*	1566961176	0
+	"	1	0
 
 > ~/Au/docs/index.rst
 	*	1566949565	0

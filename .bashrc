@@ -19,11 +19,12 @@ alias gpull="git pull"
 alias please="sudo"
 alias yeet="echo 'This Bitch Empty'"
 alias ah_shit="echo 'here we go again'"
-alias jp2a='~/jp2a/src/jp2a'
 alias think="jp2a ~/think.jpg --grayscale" 
 alias stonks="jp2a ~/stonks.jpg"
-##############from devin#####################################################
 
+
+
+##############from devin#####################################################
 export VISUAL=vim
 export EDITOR="$VISUAL" 
 
@@ -58,6 +59,6 @@ if [ -f ~/.git-prompt.sh ]; then
   GIT_PS1_SHOWUNTRACKEDFILES=true
   GIT_PS1_SHOWUPSTREAM="auto"
   GIT_PS1_HIDE_IF_PWD_IGNORED=true
-  GIT_PS1_SHOWCOLORHINTS=true
+  GIT_PS2_SHOWCOLORHINTS=true
   . ~/.git-prompt.sh
 fi
