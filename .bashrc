@@ -1,28 +1,3 @@
-source /arm/pd/setup/bash
-module load arm/cluster 
-module load swdev 
-module load git/git/v2.0.0
-module unload python/python/3.4.4
-module load python/python/3.6.1
-module loat util
-module load jonas/tig/2.0.3
-module load python/jsonschema_py3.6.1/2.6.0
-module load vim/vim/8.1
-module load gnu/tmux/3.0
-export LANG=en_US.utf8
-export LC_ALL=en_US.utf8
-export PATH=$PATH:/home/leepak01/Sublime\ Text\ 2
-export PATH=$PATH:/home/leepak01/.local/bin
-alias subl=sublime_text
-alias work="/projects/pd/performance/work/leepak01"
-alias BL="bsub -Jdebm-pd-run -qinter -Is -W 360:00 -M 15000000 -PPJ02519A"
-alias BS="bsub -Jdebm-pd-run -qinter -Is -W 60:00 -M 150000 -PPJ02519A"
-alias Bshell="bsub -Jdebm-pd-run -qinter -Is -M 150000 -PPJ02519A bash"
-alias cdwork="cd /projects/pd/performance/work/leepak01/"
-alias ebmveconf="-c /projects/pd/performance/work/leepak01/apt/regress/configs/zeus_ebm/ve.cfg"
-alias zeus_ebm="cd work/ebm/build/x86_64/opt/bin/zeus_sim"
-alias py=python
-alias cdarchive="cd /projects/pd/pj03221_cpu_perf/"
 function gpush {
 		currbranch=$(git name-rev --name-only HEAD)
 		git push origin $currbranch
