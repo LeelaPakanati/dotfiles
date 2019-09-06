@@ -1,16 +1,3 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-call plug#begin()
-Plug 'rakr/vim-one'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-call plug#end()
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " change leader to ","
 let mapleader = ","
 
@@ -95,13 +82,7 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-
-
 set background=dark " for the dark version
-" set background=light " for the light version
-#colorscheme one
-set background=dark " for the dark version
-#let g:airline_theme='one'
-
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum
+
