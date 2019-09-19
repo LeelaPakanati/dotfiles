@@ -13,6 +13,8 @@ set scrolloff=15
 set esckeys
 set number
 
+syntax on
+
 " navigation with ijkl or mouse, insert with ;, escape with ;;
 noremap ; i
 noremap l l
