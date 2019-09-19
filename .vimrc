@@ -83,6 +83,4 @@ if (empty($TMUX))
   endif
 endif
 set background=dark " for the dark version
-set t_8b=^[[48;2;%lu;%lu;%lum
-set t_8f=^[[38;2;%lu;%lu;%lum
 
