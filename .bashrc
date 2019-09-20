@@ -1,4 +1,5 @@
 alias apt="sudo apt"
+alias pacman="sudo pacman"
 alias python="python3"
 alias pip="pip3"
 function gpush {
@@ -48,3 +49,19 @@ ring() {
 alias grep='grep --color=always'
 
 PS1="\[\e[36m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/lee/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/lee/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/lee/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/lee/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
