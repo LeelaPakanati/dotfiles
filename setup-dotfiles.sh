@@ -9,3 +9,8 @@ ln -s $dir/.bashrc ~/.bashrc
 ln -s $dir/.vimrc ~/.vimrc 
 ln -s $dir/.vim ~/.vim 
 ln -s $dir/.tmux.conf ~/.tmux.conf 
+
+if [ "$1" == "-d" ] 
+then
+    rm ~/.bashrc.old ~/.vimrc.old ~/.vim.old ~/.tmux.conf.old -rf
+fi
