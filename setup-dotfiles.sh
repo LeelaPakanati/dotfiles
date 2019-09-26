@@ -4,7 +4,7 @@ mv ~/.vimrc ~/.vimrc.old
 mv ~/.vim ~/.vim.old
 mv ~/.tmux.conf ~/.tmux.conf.old
 mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.old
-dir=`dirname $0`
+dir="$( cd "$(dirname "$0")" ; pwd -P )"
 echo $dir
 ln -s $dir/.bashrc ~/.bashrc 
 ln -s $dir/.vimrc ~/.vimrc 
