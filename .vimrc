@@ -1,3 +1,9 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Leela Pakanati 
+" Dotfiles: vimrc
+" This is a living document of my vim configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " change leader to ","
 let mapleader = ","
 

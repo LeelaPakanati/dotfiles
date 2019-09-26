@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/lee/dotfiles'
 let g:netrw_dirhist_0='/'
 let g:netrw_dirhist_9='/home'
 let g:netrw_dirhist_8='/home/lee'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_5='/home/lee/dotfiles'
 let g:netrw_dirhist_4='/home/lee'
 let g:netrw_dirhist_3='/home/lee/Documents/IMC_test/IMC FPGA Engineer Assignment RTL files'
 let g:netrw_dirhist_2='/home/lee/.config/termite'
-let g:netrw_dirhist_1='/home/lee'

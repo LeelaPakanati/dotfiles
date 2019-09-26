@@ -1,7 +1,20 @@
+#######################################################
+# Leela Pakanati 
+# Dotfiles: Bashrc
+# This is a living document of my bashrc configuration
+#######################################################
+
+
+PS1="\[\e[36m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
+alias chrome='google-chrome-stable'
 alias apt="sudo apt"
+alias please="sudo"
 alias pacman="sudo pacman"
 alias python="python3"
 alias pip="pip3"
+export PATH=$PATH:"'python -m site --user-base' /bin"
+
+###################Git commands#######################################
 function gpush {
 		currbranch=$(git name-rev --name-only HEAD)
 		git push origin $currbranch
@@ -17,17 +30,16 @@ alias gundo="git reset HEAD~1"
 alias gstat="git status"
 alias glog="git log"
 alias greset1="git reset HEAD~1"
-alias ut="python -m unittest -v"
 alias gdiff="git diff"
 alias gpull="git pull"
-alias please="sudo"
+
+################## MEMES ####################################
 alias yeet="echo 'This Bitch Empty'"
 alias ah_shit="echo 'here we go again'"
 alias think="jp2a ~/think.jpg --grayscale" 
 alias stonks="jp2a ~/stonks.jpg"
 
-export PATH=$PATH:"'python -m site --user-base' /bin"
-#############f#rom devin#####################################################
+##########TMUX and VIM Stuff#################################
 export VISUAL=vim
 export EDITOR="$VISUAL" 
 
@@ -48,7 +60,6 @@ ring() {
 
 alias grep='grep --color=always'
 
-PS1="\[\e[36m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
