@@ -32,8 +32,9 @@ noremap ' o
 noremap o <C-d>
 noremap u <C-u>
 noremap <C-u> u
+imap <C-u> <C-w>
 
-" Sets how many lines of history VIM has to remember
+"Sets how many lines of history VIM has to remember
 set history=500
 
 " Enable filetype plugins
