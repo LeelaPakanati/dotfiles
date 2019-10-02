@@ -14,6 +14,10 @@ alias python="python3"
 alias pip="pip3"
 export PATH=$PATH:"'python -m site --user-base' /bin"
 
+function showtime {
+                    watch -ct -n1 "date '+%T' | figlet | toilet -f term --gay"
+                    }
+
 ###################Git commands#######################################
 function gpush {
 		currbranch=$(git name-rev --name-only HEAD)
