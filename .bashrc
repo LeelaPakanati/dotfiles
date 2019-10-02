@@ -34,8 +34,8 @@ alias gdiff="git diff"
 alias gpull="git pull"
 
 ################## MEMES ####################################
-alias yeet="echo 'This Bitch Empty'"
-alias ah_shit="echo 'here we go again'"
+alias yeet="figlet This Bitch Empty"
+alias ah_shit="figlet here we go again"
 alias think="jp2a ~/think.jpg --grayscale" 
 alias stonks="jp2a ~/stonks.jpg"
 

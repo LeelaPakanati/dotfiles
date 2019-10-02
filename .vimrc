@@ -18,7 +18,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 
-
 call vundle#end()
 filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,14 +50,14 @@ set number
 
 syntax on
 
-" navigation with ijkl or mouse, insert with ;, escape with ;;
+" navigation with ijkl or mouse, insert with ;, escape with ,, 
 noremap ; i
 noremap l l
 noremap i k
 noremap k j
 noremap j h
-imap ;; <Esc>
-xmap ;; <ESC> 
+imap ,, <Esc>
+xmap ,, <ESC> 
 set mouse=a
 
 "use ctrl-direction for words
