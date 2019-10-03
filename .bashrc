@@ -6,6 +6,8 @@
 
 
 PS1="\[\e[36m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
+alias startdocker='systemctl start docker'
+alias stopdocker='systemctl stop docker'
 alias chrome='google-chrome-stable'
 alias apt="sudo apt"
 alias please="sudo"
