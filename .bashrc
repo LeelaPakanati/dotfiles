@@ -4,21 +4,32 @@
 # This is a living document of my bashrc configuration
 #######################################################
 
-
+################# Bash setup ###########################
 PS1="\[\e[36m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
+shopt -s autocd
+
+
+
+############ Useful commands ###########################
 alias startdocker='systemctl start docker'
 alias stopdocker='systemctl stop docker'
+export PATH=$PATH:"'python -m site --user-base' /bin"
+
+function showtime {
+                    watch -ct -n1 "date '+%T' | figlet | toilet -f term --gay"
+                    }
+
+##################### Overwrite regular commands #####################
 alias chrome='google-chrome-stable'
 alias apt="sudo apt"
 alias please="sudo"
 alias pacman="sudo pacman"
 alias python="python3"
 alias pip="pip3"
-export PATH=$PATH:"'python -m site --user-base' /bin"
-
-function showtime {
-                    watch -ct -n1 "date '+%T' | figlet | toilet -f term --gay"
-                    }
+alias grep="grep --color=auto"
+alias ls="ls -hN --color=auto --group-directories-first"
+alias ccat="highlight --out-format=ansi"
+alias ka="killall"
 
 ###################Git commands#######################################
 function gpush {
