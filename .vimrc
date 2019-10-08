@@ -33,6 +33,20 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 """"""""""""""""""""""""""""""""""""""""""
 
+"""""""""""browser settings"""""""""""""""
+let g:netrw_banner=0
+let g:netrw_banner_split=4
+let g:netrw_altv=1
+let g:netrw_lifestyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+"""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""find files"""""""""""""""""""""""
+filetype plugin indent on
+set path+=**
+set wildmenu
+"""""""""""""""""""""""""""""""""""""""""""
+"
 " change leader to ","
 let mapleader = ","
 
@@ -48,7 +62,9 @@ set scrolloff=15
 set esckeys
 set number
 
+set nocompatible
 syntax on
+filetype plugin on
 
 " navigation with ijkl or mouse, insert with ;, escape with ,, 
 noremap ; i
