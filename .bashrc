@@ -25,6 +25,7 @@ function showtime {
                     }
 
 ##################### Overwrite regular commands #####################
+alias fxp='xdg-open .'
 alias chrome='google-chrome-stable'
 alias apt="sudo apt"
 alias please="sudo"
