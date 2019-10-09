@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/lee/.config/gtk-3.0'
+let g:netrw_dirhist_4='/home/lee/.config'
+let g:netrw_dirhist_3='/home/lee/.config/termite'
 let g:netrw_dirhist_2='/home/lee/dotfiles'
 let g:netrw_dirhist_1='/home/lee/OneDrive/Class Files/jr_fall/ECE433/Lab5'
 let g:netrw_dirhist_0='/home/lee/ECE460/mult-code'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_9='/home/lee'
 let g:netrw_dirhist_8='/home/lee/.ipython/profile_default/log'
 let g:netrw_dirhist_7='/home/lee/.ipython/profile_default'
 let g:netrw_dirhist_6='/home/lee/.ipython/nbextensions'
-let g:netrw_dirhist_5='/home/lee/.ipython/extensions'
-let g:netrw_dirhist_4='/home/lee/.ipython'
-let g:netrw_dirhist_3='/home/lee/.ipynb_checkpoints'

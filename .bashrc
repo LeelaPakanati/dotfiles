@@ -11,22 +11,27 @@
 
 ################# Bash setup ###########################
 PS1="\[\e[36m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
-shopt -s autocd
+shopt -s autocd #give directory to automatically cd into it
 
+#auto start terminals in tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 
+export PATH=$PATH:"'python -m site --user-base' /bin"
 
 ############ Useful commands ###########################
 alias startdocker='systemctl start docker'
 alias stopdocker='systemctl stop docker'
-export PATH=$PATH:"'python -m site --user-base' /bin"
+alias fxp='xdg-open .'
+alias chrome='google-chrome-stable'
+alias ka="killall"
 
 function showtime {
                     watch -ct -n1 "date '+%T' | figlet | toilet -f term --gay"
                     }
 
 ##################### Overwrite regular commands #####################
-alias fxp='xdg-open .'
-alias chrome='google-chrome-stable'
 alias apt="sudo apt"
 alias please="sudo"
 alias pacman="sudo pacman"
@@ -35,7 +40,6 @@ alias pip="pip3"
 alias grep="grep --color=auto"
 alias ls="ls -hN --color=auto --group-directories-first"
 alias ccat="highlight --out-format=ansi"
-alias ka="killall"
 
 ###################Git commands#######################################
 function gpush {
