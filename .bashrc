@@ -9,9 +9,6 @@
 # This is a living document of my bashrc configuration
 #######################################################
 
-### Termite Compatibility
-[[ $TERM == xterm-termite ]] && export TERM=xterm
-
 ################# Bash setup ###########################
 PS1="\[\e[36m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
 shopt -s autocd #give directory to automatically cd into it
