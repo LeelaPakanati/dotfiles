@@ -21,7 +21,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 filetype plugin indent on
@@ -81,7 +81,7 @@ imap ,, <Esc>
 xmap ,, <ESC> 
 set mouse=a
 
-"use ctrl-direction for words
+"use ctrl+direction for words
 noremap <C-l> w
 noremap <C-j> B
 noremap ' o
@@ -105,9 +105,8 @@ nmap <leader>q :q<CR>
 nmap <leader>Q :q!<CR>
 nmap <leader>x :x<CR>
 
-" Tabs: like sublime:
-nnoremap <C-T> :tabprevious<CR>
-nnoremap <C-t> :tabnext<CR>
+""""""""""""""""""" Tabs: like chrome/sublime:"""""""""""""""""""""
+nnoremap <C-t> :tabnext<CR> 
 nnoremap <C-o> :Tex<CR>
 nnoremap <C-n> :tabnew 
 nnoremap <C-w> :q<CR>
@@ -120,7 +119,7 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
-""""""""""""""""Relative Line Number""""""""""""""""""""""""""
+""""""""""""""""Hybrid Relative Line Number""""""""""""""""""""""""""
 :set number relativenumber
 
 :augroup numbertoggle

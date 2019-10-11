@@ -9,13 +9,16 @@
 # This is a living document of my bashrc configuration
 #######################################################
 
+### Termite Compatibility
+[[ $TERM == xterm-termite ]] && export TERM=xterm
+
 ################# Bash setup ###########################
 PS1="\[\e[36m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
 shopt -s autocd #give directory to automatically cd into it
 
 #auto start terminals in tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+  tmux
 fi
 
 export PATH=$PATH:"'python -m site --user-base' /bin"
