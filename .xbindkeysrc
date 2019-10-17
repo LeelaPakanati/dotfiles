@@ -1,0 +1,18 @@
+# switch tabs with side scroll
+"xte 'keydown Control_L'; xte 'key Tab'; xte 'keyup Control_L'"
+    b:6
+
+"xte 'keydown Control_L'; xte 'keydown Shift_L'; xte 'key Tab'; xte 'keyup Shift_L'; xte 'keyup Control_L'"
+    b:7
+
+# close tab with upper left
+"xte 'keydown Control_L'; xte 'key w'; xte 'keyup Control_L'"
+    b:9
+
+#open super view with lower left
+"xte 'key Super_L'"
+    b:8
+
+##################################
+# End of xbindkeys configuration #
+##################################
