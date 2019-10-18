@@ -27,9 +27,10 @@ alias fxp='xdg-open .'
 alias chrome='google-chrome-stable'
 alias ka="killall"
 
-function showtime {
+function gaytime {
                     watch -ct -n1 "date '+%T' | figlet | toilet -f term --gay"
                     }
+alias showtime='tty-clock -csBnbtC 6'
 
 ##################### Overwrite regular commands #####################
 alias apt="sudo apt"
