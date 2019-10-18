@@ -30,7 +30,7 @@ alias ka="killall"
 function gaytime {
                     watch -ct -n1 "date '+%T' | figlet | toilet -f term --gay"
                     }
-alias showtime='tty-clock -csBnbtC 6'
+alias showtime='tty-clock -csBbtC 6'
 
 ##################### Overwrite regular commands #####################
 alias apt="sudo apt"
