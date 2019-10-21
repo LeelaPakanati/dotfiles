@@ -1,1 +1,1 @@
-dotfiles/.vim
+/home/lee/dotfiles/.vim

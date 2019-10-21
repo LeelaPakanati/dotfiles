@@ -21,7 +21,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
+Plugin 'severin-lemaignan/vim-minimap'
 
 call vundle#end()
 filetype plugin indent on

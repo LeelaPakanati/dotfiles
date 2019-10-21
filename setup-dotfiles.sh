@@ -1,9 +1,15 @@
 #!/bin/bash
+cd dotfiles
+git pull
+git submodule update --init --recursive
+cd ..
+
 mv ~/.bashrc ~/.bashrc.old
 mv ~/.vimrc ~/.vimrc.old
 mv ~/.vim ~/.vim.old
 mv ~/.tmux.conf ~/.tmux.conf.old
 mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.old
+
 dir="$( cd "$(dirname "$0")" ; pwd -P )"
 echo $dir
 ln -s $dir/.bashrc ~/.bashrc 
