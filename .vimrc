@@ -23,6 +23,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
