@@ -18,7 +18,7 @@ ln -s $dir/.vimrc ~/.vimrc
 ln -s $dir/.vim ~/.vim 
 ln -s $dir/.tmux.conf ~/.tmux.conf 
 ln -s $dir/ranger/rc.conf ~/.config/ranger/rc.conf
-ln -s $dir/termite/rc.conf ~/.config/termite/config
+ln -s $dir/termite/config ~/.config/termite/config
 
 if [ "$1" == "-d" ] 
 then
