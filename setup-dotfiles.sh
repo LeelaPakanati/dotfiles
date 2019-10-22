@@ -9,6 +9,7 @@ mv ~/.vimrc ~/.vimrc.old
 mv ~/.vim ~/.vim.old
 mv ~/.tmux.conf ~/.tmux.conf.old
 mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.old
+mv ~/.config/termite/config ~/.config/termite/config.old
 
 dir="$( cd "$(dirname "$0")" ; pwd -P )"
 echo $dir
@@ -16,9 +17,10 @@ ln -s $dir/.bashrc ~/.bashrc
 ln -s $dir/.vimrc ~/.vimrc 
 ln -s $dir/.vim ~/.vim 
 ln -s $dir/.tmux.conf ~/.tmux.conf 
-ln -s $dir/rc.conf ~/.config/ranger/rc.conf
+ln -s $dir/ranger/rc.conf ~/.config/ranger/rc.conf
+ln -s $dir/termite/rc.conf ~/.config/termite/config
 
 if [ "$1" == "-d" ] 
 then
-    rm ~/.bashrc.old ~/.vimrc.old ~/.vim.old ~/.tmux.conf.old ~/.config/ranger/rc.conf.old -rf
+    rm ~/.bashrc.old ~/.vimrc.old ~/.vim.old ~/.tmux.conf.old ~/.config/ranger/rc.conf.old ~/.config/termite/config.old -rf
 fi
