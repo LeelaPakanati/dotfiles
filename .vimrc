@@ -10,19 +10,35 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""Notes""""""""""""""""""""""""""""""""
-"   Due to Vim's notion of 'splits within tabs'
-"   instead of the 'tabs within splits' that I prefer,
-"   I don't use splits in my workflow, I instead just 
-"   use different tmux panes for each 'split'
 "
-"   Pros:
-"       It's what I like
+"   I use a controversial navigation in vim:
+"       IJKL (like arrow keys) instead of HKJL
+"       See navigation section for more details
+"       Pros: 
+"           It's what I like
+"           Consistency with arrow keys
 "
-"   Cons:
-"       Must use tmux copy for copy between splits
-"       instead of vim yank
+"       Cons:
+"           Not consistent with everything else that uses 
+"               VIM-based naviagion - need to reconfigure
+"               other tools to work with IJKL
+"
+"   Tab/Split Workflow:
+"       Due to Vim's notion of 'splits within tabs'
+"       instead of the 'tabs within splits' that I prefer,
+"       I don't use splits in my workflow, I instead just 
+"       use different tmux panes for each 'split'
+"
+"       Pros:
+"           It's what I like
+"
+"       Cons:
+"           Must use tmux copy for copy between splits
+"           instead of vim yank
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
+" change leader to ","
+let mapleader = ","
 
 """"""""""""""""VUNDLE"""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
@@ -39,65 +55,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 call vundle#end()
 filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" change leader to ","
-let mapleader = ","
-
-"""""""""""""""Syntastic - linter"""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-
-"-- disable linter by default, turn on w/ <leader>s
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <leader>s :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-""""""""""""""""""""""""""""""""""""""""""
-
-"-- toggle minimap w/ <leader>m
-nnoremap <leader>m :MinimapToggle<CR>
-
-"-- Y to copy to end of line
-nnoremap Y y$
-
-"""""""""""browser settings"""""""""""""""
-let g:netrw_banner=0
-let g:netrw_banner_split=4
-let g:netrw_altv=1
-let g:netrw_lifestyle=3
-let g:netrw_list_hide=netrw_gitignore#Hide()
-"""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""find files"""""""""""""""""""""""
-filetype plugin indent on
-set path+=**
-set wildmenu
-"""""""""""""""""""""""""""""""""""""""""""
-
-" typing behavior
-set cursorline
-set modeline
-set autoindent
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=8
-set scrolloff=15
-set esckeys
-set number
-
-set nocompatible
-syntax on
-filetype plugin on
-
-" navigation with ijkl or mouse, insert with ;, escape with ,, 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"               Cursed Navigation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap ; i
 noremap l l
 noremap i k
@@ -115,13 +81,36 @@ noremap o <C-d>
 noremap u <C-u>
 noremap <C-u> u
 imap <C-u> <C-w>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Sets how many lines of history VIM has to remember
-set history=500
+""""""""""""" Tabs: like chrome/sublime:"""""""""""""""
+nnoremap <C-t> :tabnext<CR> 
+nnoremap <C-o> :Tex<CR>/
+nnoremap <C-n> :tabnew 
+nnoremap <C-w> :q<CR>
+nnoremap <C-W> :q!<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
+"""""""""""""""Syntastic - linter""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+
+"-- disable linter by default, turn on w/ <leader>s
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <leader>s :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""Useful Shortcuts""""""""""""""""""""""
+"-- toggle minimap w/ <leader>m
+nnoremap <leader>m :MinimapToggle<CR>
+
+"-- Y to copy to end of line
+nnoremap Y y$
 
 " Fast saving
 nmap <leader>w :w!<CR>
@@ -130,13 +119,33 @@ nmap <leader>w :w!<CR>
 nmap <leader>q :q<CR>
 nmap <leader>Q :q!<CR>
 nmap <leader>x :x<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""" Tabs: like chrome/sublime:"""""""""""""""""""""
-nnoremap <C-t> :tabnext<CR> 
-nnoremap <C-o> :Tex<CR>
-nnoremap <C-n> :tabnew 
-nnoremap <C-w> :q<CR>
-nnoremap <C-W> :q!<CR>
+""""""""""""""""General Vim Setup""""""""""""""""""""""""
+" typing behavior
+set cursorline
+set modeline
+set autoindent
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=8
+set scrolloff=15
+set esckeys
+set number
+
+set nocompatible
+syntax on
+filetype plugin on
+
+set autoread
+
+"Sets how many lines of history VIM has to remember
+set history=500
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
 
 set backspace=2 " make backspace work like most other programs
 
@@ -144,6 +153,7 @@ set backspace=2 " make backspace work like most other programs
 set showmatch 
 " How many tenths of a second to blink when matching brackets
 set mat=2
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""Hybrid Relative Line Number""""""""""""""""""""""""""
 :set number relativenumber
@@ -154,6 +164,26 @@ set mat=2
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""find files"""""""""""""""""""""""
+filetype plugin indent on
+set path+=**
+set wildmenu
+"""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""browser settings"""""""""""""""
+let g:netrw_banner=0
+let g:netrw_banner_split=4
+let g:netrw_altv=1
+let g:netrw_lifestyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+"""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""Being Extra"""""""""""""""""""""
+" handling typos
+ab teh the
+ab hte the
+"""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts

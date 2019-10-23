@@ -23,16 +23,29 @@ export PATH=$PATH:"'python -m site --user-base' /bin"
 ############ Useful commands ###########################
 alias startdocker='systemctl start docker'
 alias stopdocker='systemctl stop docker'
-alias fxp='xdg-open .'
+alias fxp='xdg-open .'                      # Open GUI file explorer
 alias chrome='google-chrome-stable'
-alias ka="killall"
+alias ka='killall'
+alias ll='ls -al'
+
 
 function gaytime {
                     watch -ct -n1 "date '+%T' | figlet | toilet -f term --gay"
                     }
 alias showtime='tty-clock -csBbtC 6'
 
-##################### Overwrite regular commands #####################
+# repeat a command over and over
+repeat(){
+    while true; do "$@"; done
+}
+
+# Run command and then ring bell (can run just 'bell' after cmd already running)
+bell() {
+    echo "$@"
+    "$@"; echo -e "\a"
+}
+
+############### Overwrite regular commands w/ options##################
 alias apt="sudo apt"
 alias please="sudo"
 alias pacman="sudo pacman"
@@ -43,7 +56,7 @@ alias ls="ls -hN --color=auto --group-directories-first"
 alias ccat="highlight --out-format=ansi"
 alias tree="tree -CF"
 
-###################Git commands#######################################
+################## Git aliases #########################################
 function gpush {
 		currbranch=$(git name-rev --name-only HEAD)
 		git push origin $currbranch
@@ -71,23 +84,6 @@ alias stonks="jp2a ~/stonks.jpg"
 ##########TMUX and VIM Stuff#################################
 export VISUAL=vim
 export EDITOR="$VISUAL" 
-
-# useful functions/aliases
-alias ll="ls -la"
-repeat(){
-    while true; do "$@"; done
-}
-
-bell() {
-    echo "$@"
-    "$@"; echo -e "\a"
-}
-
-ring() {
-    echo -e "\a"
-}
-
-alias grep='grep --color=always'
 
 
 # >>> conda initialize >>>
