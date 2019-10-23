@@ -41,6 +41,7 @@ alias pacman="sudo pacman"
 alias grep="grep --color=auto"
 alias ls="ls -hN --color=auto --group-directories-first"
 alias ccat="highlight --out-format=ansi"
+alias tree="tree -CF"
 
 ###################Git commands#######################################
 function gpush {

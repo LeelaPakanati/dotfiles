@@ -9,6 +9,21 @@
 " This is a living document of my vim configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"""""""""""""""""""Notes""""""""""""""""""""""""""""""""
+"   Due to Vim's notion of 'splits within tabs'
+"   instead of the 'tabs within splits' that I prefer,
+"   I don't use splits in my workflow, I instead just 
+"   use different tmux panes for each 'split'
+"
+"   Pros:
+"       It's what I like
+"
+"   Cons:
+"       Must use tmux copy for copy between splits
+"       instead of vim yank
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 """"""""""""""""VUNDLE"""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
