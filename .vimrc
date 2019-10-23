@@ -21,24 +21,32 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
+" change leader to ","
+let mapleader = ","
 
-"""""""""""""""""""Syntastic"""""""""""""
+"""""""""""""""Syntastic - linter"""""""""""""
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 0
+
+"-- disable linter by default, turn on w/ <leader>s
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <leader>s :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 """"""""""""""""""""""""""""""""""""""""""
+
+"-- toggle minimap w/ <leader>m
+nnoremap <leader>m :MinimapToggle<CR>
 
 """""""""""browser settings"""""""""""""""
 let g:netrw_banner=0
@@ -54,8 +62,6 @@ set path+=**
 set wildmenu
 """""""""""""""""""""""""""""""""""""""""""
 "
-" change leader to ","
-let mapleader = ","
 
 " typing behavior
 set cursorline
