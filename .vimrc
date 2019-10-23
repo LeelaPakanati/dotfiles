@@ -28,6 +28,7 @@ Plugin 'vim-airline/vim-airline'
 call vundle#end()
 filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " change leader to ","
 let mapleader = ","
 
@@ -48,6 +49,9 @@ nnoremap <leader>s :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 "-- toggle minimap w/ <leader>m
 nnoremap <leader>m :MinimapToggle<CR>
 
+"-- Y to copy to end of line
+nnoremap Y y$
+
 """""""""""browser settings"""""""""""""""
 let g:netrw_banner=0
 let g:netrw_banner_split=4
@@ -61,7 +65,6 @@ filetype plugin indent on
 set path+=**
 set wildmenu
 """""""""""""""""""""""""""""""""""""""""""
-"
 
 " typing behavior
 set cursorline
