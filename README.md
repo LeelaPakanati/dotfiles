@@ -8,6 +8,5 @@ To automatically setup the dotfiles run from anywhere:
 This will keep the old configuration files around with a '.old' suffix  
 
 **Options:**  
--d:  
-    Don't keep '.old' files around; i.e. completely overwrite
+-d -- Don't keep '.old' files around; i.e. completely overwrite
     
