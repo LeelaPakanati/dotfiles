@@ -171,7 +171,7 @@ set path+=**
 set wildmenu
 """""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""browser settings"""""""""""""""
+""""""netrw browser settings"""""""""""""""
 let g:netrw_banner=0
 let g:netrw_banner_split=4
 let g:netrw_altv=1
@@ -183,6 +183,8 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 " handling typos
 ab teh the
 ab hte the
+ab ie i.e.
+ab eg e.g.
 """""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
