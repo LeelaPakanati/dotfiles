@@ -9,4 +9,10 @@ This will keep the old configuration files around with a '.old' suffix
 
 **Options:**  
 -d -- Don't keep '.old' files around; i.e. completely overwrite
-    
+
+### Sets up config for:
+* bash
+* vim
+* tmux
+* ranger
+* termite
