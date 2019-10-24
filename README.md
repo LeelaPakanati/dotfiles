@@ -5,9 +5,9 @@ To automatically setup the dotfiles run from anywhere:
 ```
 ./setup-files.sh
 ```  
-
 This will keep the old configuration files around with a '.old' suffix  
-To delete the old files and compltely overwrite:
-```
-./setup-files.sh -d
-```  
+
+**Options:**  
+-d:  
+    Don't keep '.old' files around; i.e. completely overwrite
+    
