@@ -44,7 +44,7 @@ echo -e "\n--> Reloading Tmux"
 tmux source ~/.tmux.conf
 
 echo -e "\n--> Installing Plugins\n"
-source $dir/update_dotfiles.sh
+source $dir/updatesh
 
 if [ "$1" == "-d" ] 
 then
