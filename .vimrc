@@ -56,6 +56,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'francoiscabrol/ranger.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -85,7 +86,7 @@ imap <C-u> <C-w>
 
 """"""""""""" Tabs: like chrome/sublime:"""""""""""""""
 nnoremap <C-t> :tabnext<CR> 
-nnoremap <C-o> :Tex<CR>/
+nnoremap <C-o> :RangerCurrentDirectoryNewTab<CR>
 nnoremap <C-n> :tabnew 
 nnoremap <C-w> :q<CR>
 nnoremap <C-W> :q!<CR>
@@ -113,12 +114,14 @@ nnoremap <leader>m :MinimapToggle<CR>
 nnoremap Y y$
 
 " Fast saving
-nmap <leader>w :w!<CR>
+nnoremap <leader>w :w!<CR>
 
 " Fast quitting
-nmap <leader>q :q<CR>
-nmap <leader>Q :q!<CR>
-nmap <leader>x :x<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>Q :q!<CR>
+nnoremap <leader>x :x<CR>
+
+nnoremap <leader>h :set hlsearch! hlsearch?<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""General Vim Setup""""""""""""""""""""""""
@@ -158,6 +161,10 @@ set backspace=2 " make backspace work like most other programs
 set showmatch 
 " How many tenths of a second to blink when matching brackets
 set mat=2
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""Ranger integration""""""""""""""""""""""""""
+let g:ranger_map_keys = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""Hybrid Relative Line Number""""""""""""""""""""""""""
@@ -170,12 +177,6 @@ set mat=2
 :augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""find files"""""""""""""""""""""""
-filetype plugin indent on
-set path+=**
-set wildmenu
-"""""""""""""""""""""""""""""""""""""""""""
-
 """"""netrw browser settings"""""""""""""""
 let g:netrw_banner=0
 let g:netrw_banner_split=4
@@ -184,6 +185,11 @@ let g:netrw_lifestyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
 """""""""""""""""""""""""""""""""""""""""""
 
+""""""""""find files"""""""""""""""""""""""
+filetype plugin indent on
+set path+=**
+set wildmenu
+"""""""""""""""""""""""""""""""""""""""""""
 """""""""""Being Extra"""""""""""""""""""""
 " handling typos
 ab teh the
