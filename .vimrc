@@ -57,6 +57,7 @@ Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'francoiscabrol/ranger.vim'
+Plugin 'xuhdev/vim-latex-live-preview'
 
 call vundle#end()
 filetype plugin indent on
@@ -163,10 +164,6 @@ set showmatch
 set mat=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""Ranger integration""""""""""""""""""""""""""
-let g:ranger_map_keys = 0
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """"""""""""""""Hybrid Relative Line Number""""""""""""""""""""""""""
 :set number relativenumber
 
@@ -197,6 +194,12 @@ ab hte the
 ab ie i.e.
 ab eg e.g.
 """""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""ETC"""""""""""""""""""""""""""""
+let g:ranger_map_keys = 0
+let g:livepreview_previewer = 'zathura'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts

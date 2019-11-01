@@ -80,6 +80,8 @@ alias yeet="figlet This Bitch Empty"
 alias ah_shit="figlet here we go again"
 alias think="jp2a ~/think.jpg --grayscale" 
 alias stonks="jp2a ~/stonks.jpg"
+alias lc="ls | figlet | toilet --gay -f term"
+alias llc="ll | figlet | toilet --gay -f term"
 
 ##########TMUX and VIM Stuff#################################
 export VISUAL=vim
