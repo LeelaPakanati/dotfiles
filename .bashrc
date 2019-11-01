@@ -45,6 +45,12 @@ bell() {
     "$@"; echo -e "\a"
 }
 
+################### General shortcuts #################################
+alias v="vim"
+alias vi="vim"
+alias r="ranger"
+
+
 ############### Overwrite regular commands w/ options##################
 alias apt="sudo apt"
 alias please="sudo"
