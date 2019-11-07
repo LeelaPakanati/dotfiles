@@ -19,6 +19,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 export PATH=$PATH:"'python -m site --user-base' /bin"
+export PATH=$PATH:/opt/riscv/bin
 
 ############ Useful commands ###########################
 alias startdocker='systemctl start docker'
