@@ -191,6 +191,7 @@ set wildmenu
 " handling typos
 ab teh the
 ab hte the
+ab adn and
 ab ie i.e.
 ab eg e.g.
 """""""""""""""""""""""""""""""""""""""""""
