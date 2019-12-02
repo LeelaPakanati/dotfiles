@@ -60,6 +60,7 @@ alias pacman="sudo pacman"
 #alias pip="pip3"
 alias grep="grep --color=auto"
 alias ls="ls -hN --color=auto --group-directories-first"
+alias sl="ls -hN --color=auto --group-directories-first"
 alias ccat="highlight --out-format=ansi"
 alias tree="tree -CF"
 
