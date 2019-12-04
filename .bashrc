@@ -29,6 +29,10 @@ alias chrome='google-chrome-stable'
 alias ka='killall'
 alias ll='ls -al'
 
+whosmans(){
+    man -k . | dmenu -l 30 -p 'select man page' | awk '{print $1}' | xargs -r man -Tpdf | zathura -
+}
+
 
 function gaytime {
                     watch -ct -n1 "date '+%T' | figlet | toilet -f term --gay"
