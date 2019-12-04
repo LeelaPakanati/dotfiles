@@ -12,6 +12,7 @@ cd -
 echo -e "\n--> Moving all exiting dotfiles to *.old"
 mv ~/.bashrc ~/.bashrc.old > /dev/null
 mv ~/.vimrc ~/.vimrc.old > /dev/null
+mv ~/.vimextras ~/.vimextras.old > /dev/null
 mv ~/.tmux.conf ~/.tmux.conf.old > /dev/null
 mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.old > /dev/null
 mv ~/.config/termite/config ~/.config/termite/config.old > /dev/null
@@ -19,6 +20,8 @@ mv ~/.config/termite/config ~/.config/termite/config.old > /dev/null
 echo -e "\n--> Linking dotfiles to repository "
 ln -s $dir/.bashrc ~/.bashrc 
 ln -s $dir/.vimrc ~/.vimrc 
+ln -s $dir/.vimextras ~/.vimextras 
+ln -s $dir/snippets/* ~/.vim/UltiSnips/ 
 ln -s $dir/.tmux.conf ~/.tmux.conf 
 ln -s $dir/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -s $dir/termite/config ~/.config/termite/config
@@ -49,5 +52,5 @@ source $dir/update.sh
 if [ "$1" == "-d" ] 
 then
     echo -e "\n--> Deleting old dotfiles"
-    rm ~/.bashrc.old ~/.vimrc.old  ~/.tmux.conf.old  ~/.config/ranger/rc.conf.old ~/.config/termite/config.old -rf
+    rm ~/.bashrc.old ~/.vimrc.old ~/.vimextras.old ~/.tmux.conf.old  ~/.config/ranger/rc.conf.old ~/.config/termite/config.old -rf
 fi

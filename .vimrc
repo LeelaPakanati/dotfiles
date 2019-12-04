@@ -57,7 +57,10 @@ Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'francoiscabrol/ranger.vim'
-Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'lervag/vimtex'
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'KeitaNakamura/tex-conceal.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -174,12 +177,27 @@ set mat=2
 :augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"""""""""""""""""LaTeX setup""""""""""""""""""""
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+"""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""snippets setup"""""""""""""
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+"""""""""""""""""""""""""""""""""""""""""""
+
 """"""netrw browser settings"""""""""""""""
-let g:netrw_banner=0
-let g:netrw_banner_split=4
-let g:netrw_altv=1
-let g:netrw_lifestyle=3
-let g:netrw_list_hide=netrw_gitignore#Hide()
+" no longer using netrw -> see ranger plugin
+"let g:netrw_banner=0
+"let g:netrw_banner_split=4
+"let g:netrw_altv=1
+"let g:netrw_lifestyle=3
+"let g:netrw_list_hide=netrw_gitignore#Hide()
 """""""""""""""""""""""""""""""""""""""""""
 
 """"""""""find files"""""""""""""""""""""""
@@ -189,13 +207,7 @@ set wildmenu
 """""""""""""""""""""""""""""""""""""""""""
 """""""""""Being Extra"""""""""""""""""""""
 " handling typos
-ab teh the
-ab hte the
-ab adn and
-ab whcih which
-ab thsi this
-ab ie i.e.
-ab eg e.g.
+source ~/.vimextras/typos.vim
 """""""""""""""""""""""""""""""""""""""""""
 
 """""""""""ETC"""""""""""""""""""""""""""""
