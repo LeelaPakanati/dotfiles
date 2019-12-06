@@ -18,30 +18,31 @@ def math():
 endglobal
 
 snippet template "Basic template" b
-\documentclass[a4paper]{article}
+\documentclass[a4paper,portrait,12pt]{article}
+\usepackage[margin=.75in]{geometry}
 
+\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[dutch]{babel}
-\usepackage{amsmath, amssymb}
-
-
-% figure support
-\usepackage{import}
-\usepackage{xifthen}
-\pdfminorversion=7
-\usepackage{pdfpages}
-\usepackage{transparent}
-\newcommand{\incfig}[1]{%
-	\def\svgwidth{\columnwidth}
-	\import{./figures/}{#1.pdf_tex}
-}
 
 \pdfsuppresswarningpagegroup=1
 
+% These are the fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{Leela Pakanati}          % Right even, Left odd
+\fancyhead[C]{$1} % Right odd,  Left even
+\fancyhead[R]{$2}          % Right even, Left odd
+\fancyfoot[L]{CSSE404: Compiler Construction}  % Right odd,  Left even
+\fancyfoot[C]{}  % Right odd,  Left even
+\fancyfoot[R]{\thepage}  % Right odd,  Left even
+
 \begin{document}
+\makeatother
+
 	$0
+
 \end{document}
 endsnippet
 
@@ -49,6 +50,14 @@ snippet beg "begin{} / end{}" bA
 \\begin{$1}
 	$0
 \\end{$1}
+endsnippet
+
+snippet sec "Section" bA
+\section{$0}
+endsnippet
+
+snippet img "Image" bA
+\includegraphics[scale=$0]{$1}
 endsnippet
 
 priority 100

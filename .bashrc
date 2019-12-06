@@ -56,7 +56,7 @@ alias vi="vim"
 alias r="ranger"
 
 
-############### Overwrite regular commands w/ options##################
+############### Overwrite regular commands w/ options#################555~C~#
 alias apt="sudo apt"
 alias please="sudo"
 alias pacman="sudo pacman"
@@ -67,6 +67,7 @@ alias ls="ls -hN --color=auto --group-directories-first"
 alias sl="ls -hN --color=auto --group-directories-first"
 alias ccat="highlight --out-format=ansi"
 alias tree="tree -CF"
+alias pdflatex="pdflatex -halt-on-error"
 
 ################## Git aliases #########################################
 function gpush {
