@@ -92,8 +92,6 @@ imap <C-u> <C-w>
 nnoremap <C-t> :tabnext<CR> 
 nnoremap <C-o> :RangerCurrentDirectoryNewTab<CR>
 nnoremap <C-n> :tabnew 
-nnoremap <C-w> :q<CR>
-nnoremap <C-W> :q!<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""Syntastic - linter""""""""""""""""""""""
@@ -117,7 +115,7 @@ nnoremap <leader>m :MinimapToggle<CR>
 "-- Y to copy to end of line
 nnoremap Y y$
 
-" Fast saving
+" Fast 
 nnoremap <leader>w :w!<CR>
 
 " Fast quitting
@@ -125,7 +123,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>x :x<CR>
 
-nnoremap <leader>h :set hlsearch! hlsearch?<CR>
+nnoremap <leader>h :set hlsearch! is! hlsearch?<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""General Vim Setup""""""""""""""""""""""""
@@ -159,12 +157,11 @@ set history=500
 filetype plugin on
 filetype indent on
 
-set backspace=2 " make backspace work like most other programs
-
 " Show matching brackets when text indicator is over them
 set showmatch 
 " How many tenths of a second to blink when matching brackets
 set mat=2
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""Hybrid Relative Line Number""""""""""""""""""""""""""
@@ -224,5 +221,6 @@ let g:livepreview_previewer = 'zathura'
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+colorscheme default
 set background=dark " for the dark version
 
