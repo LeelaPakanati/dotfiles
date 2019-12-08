@@ -15,16 +15,15 @@ mv ~/.vimrc ~/.vimrc.old > /dev/null
 mv ~/.vimextras ~/.vimextras.old > /dev/null
 mv ~/.tmux.conf ~/.tmux.conf.old > /dev/null
 mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.old > /dev/null
-mv ~/.config/termite/config ~/.config/termite/config.old > /dev/null
+mv ~/.config/zathura/zathurarc ~/.config/zathura/zathurarc.old > /dev/null
 
 echo -e "\n--> Linking dotfiles to repository "
 ln -s $dir/.bashrc ~/.bashrc 
 ln -s $dir/.vimrc ~/.vimrc 
 ln -s $dir/.vimextras ~/.vimextras 
-ln -s $dir/snippets/* ~/.vim/UltiSnips/ 
 ln -s $dir/.tmux.conf ~/.tmux.conf 
-ln -s $dir/ranger/rc.conf ~/.config/ranger/rc.conf
-ln -s $dir/termite/config ~/.config/termite/config
+ln -s $dir/rc.conf ~/.config/ranger/rc.conf
+ln -s $dir/zathurarc ~/.config/zathura/zathurarc
 
 # Installing Vundle (Vim plugin manager)
 VUNDLE=~/.vim/bundle/Vundle.vim
@@ -34,6 +33,9 @@ else
     echo -e "\n--> Installing Vundle (Vim plugin manager)\n"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim | sed "s/^/  /g"
 fi
+
+mkdir -p ~/.vim/UltiSnips
+ln -s $dir/snippets/* ~/.vim/UltiSnips/ 
 
 # Installing TPM (TMUX plugin manager)
 TPM=~/.tmux/plugins/tpm

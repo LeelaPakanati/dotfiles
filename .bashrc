@@ -30,7 +30,7 @@ alias ka='killall'
 alias ll='ls -al'
 
 whosmans(){
-    man -k . | dmenu -l 30 -p 'select man page' | awk '{print $1}' | xargs -r man -Tpdf | zathura -
+    man -k . | dmenu -l 30 -p 'select man page' -c | awk '{print $1}' | xargs -r man -Tpdf | zathura -
 }
 
 

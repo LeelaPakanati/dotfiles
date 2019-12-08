@@ -1,0 +1,13 @@
+set window-height 1440 
+set window-width 1147
+
+set adjust-open "width"
+
+map i scroll up
+map k scroll down
+map j scroll left
+map l scroll right
+
+map u scroll half-up
+map o scroll half-down
+
