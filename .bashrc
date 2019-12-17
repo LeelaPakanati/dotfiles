@@ -55,11 +55,9 @@ alias v="vim"
 alias vi="vim"
 alias r="ranger"
 
-
 ############### Overwrite regular commands w/ options#################555~C~#
 alias apt="sudo apt"
 alias please="sudo"
-alias pacman="sudo pacman"
 #alias python="python3"
 #alias pip="pip3"
 alias grep="grep --color=auto"

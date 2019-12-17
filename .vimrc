@@ -124,6 +124,8 @@ nnoremap <leader>Q :q!<CR>
 nnoremap <leader>x :x<CR>
 
 nnoremap <leader>h :set hlsearch! is! hlsearch?<CR>
+
+nnoremap <leader>default :so ~/.defaultnav.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""General Vim Setup""""""""""""""""""""""""
@@ -145,8 +147,8 @@ filetype plugin indent on
 set tabstop=4
 " " when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" " On pressing tab, insert 4 spaces
-set expandtab
+" " On pressing tab, insert tab
+set noexpandtab
 
 set autoread
 
