@@ -10,7 +10,8 @@ git pull
 cd -
 
 echo -e "\n--> Moving all exiting dotfiles to *.old"
-mv ~/.bashrc ~/.bashrc.old > /dev/null
+#mv ~/.bashrc ~/.bashrc.old > /dev/null
+mv ~/.zshrc ~/.zshrc.old > /dev/null
 mv ~/.vimrc ~/.vimrc.old > /dev/null
 mv ~/.vimextras ~/.vimextras.old > /dev/null
 mv ~/.tmux.conf ~/.tmux.conf.old > /dev/null
@@ -18,7 +19,8 @@ mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.old > /dev/null
 mv ~/.config/zathura/zathurarc ~/.config/zathura/zathurarc.old > /dev/null
 
 echo -e "\n--> Linking dotfiles to repository "
-ln -s $dir/.bashrc ~/.bashrc 
+#ln -s $dir/.bashrc ~/.bashrc 
+ln -s $dir/.zshrc ~/.zshrc 
 ln -s $dir/.vimrc ~/.vimrc 
 ln -s $dir/.vimextras ~/.vimextras 
 ln -s $dir/.tmux.conf ~/.tmux.conf 
@@ -54,5 +56,5 @@ source $dir/update.sh
 if [ "$1" == "-d" ] 
 then
     echo -e "\n--> Deleting old dotfiles"
-    rm ~/.bashrc.old ~/.vimrc.old ~/.vimextras.old ~/.tmux.conf.old  ~/.config/ranger/rc.conf.old ~/.config/termite/config.old -rf
+    rm ~/.bashrc.old ~/.zshrc.old ~/.vimrc.old ~/.vimextras.old ~/.tmux.conf.old  ~/.config/ranger/rc.conf.old ~/.config/termite/config.old -rf
 fi

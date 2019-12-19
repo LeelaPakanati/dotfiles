@@ -11,8 +11,10 @@ This will keep the old configuration files around with a '.old' suffix
 -d -- Don't keep '.old' files around; i.e. completely overwrite
 
 ### Sets up config for:
-* bash
+* <del>bash
+* zsh
 * vim
 * tmux
 * ranger
 * termite
+* zathura
