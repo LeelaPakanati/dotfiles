@@ -59,11 +59,11 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'francoiscabrol/ranger.vim'
 Plugin 'lervag/vimtex'
 Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 Plugin 'KeitaNakamura/tex-conceal.vim'
+Plugin 'voldikss/vim-floaterm'
 
 call vundle#end()
-filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,8 +74,6 @@ noremap l l
 noremap i k
 noremap k j
 noremap j h
-imap ,, <Esc>
-xmap ,, <ESC> 
 set mouse=a
 
 "use ctrl+direction for words
@@ -126,6 +124,8 @@ nnoremap <leader>x :x<CR>
 nnoremap <leader>h :set hlsearch! is! hlsearch?<CR>
 
 nnoremap <leader>default :so ~/.defaultnav.vim
+
+set pastetoggle=<leader>p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""General Vim Setup""""""""""""""""""""""""
@@ -136,13 +136,11 @@ set autoindent
 set expandtab
 set softtabstop=4
 set scrolloff=15
-set esckeys
 set number
 
 set nocompatible
 syntax on
 
-filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
 " " when indenting with '>', use 4 spaces width
@@ -164,6 +162,7 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+set completeopt-=preview
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""Hybrid Relative Line Number""""""""""""""""""""""""""
@@ -175,6 +174,10 @@ set mat=2
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""Floating Terminal""""""""""""""""
+noremap <leader>t :FloatermToggle<CR>
+"""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""LaTeX setup""""""""""""""""""""
 let g:tex_flavor='latex'
@@ -200,7 +203,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 """""""""""""""""""""""""""""""""""""""""""
 
 """"""""""find files"""""""""""""""""""""""
-filetype plugin indent on
 set path+=**
 set wildmenu
 """""""""""""""""""""""""""""""""""""""""""
