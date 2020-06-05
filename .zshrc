@@ -47,6 +47,19 @@ bell() {
     "$@"; echo -e "\a"
 }
 
+# Run command and then ring bell (can run just 'bell' after cmd already running)
+notify() {
+	if [ $# -eq 0 ];
+	then
+		fc -W
+		notify-send "`tail -n2 ~/.histfile | head -n1` Finished Running"
+	else
+		echo "$@"
+		"$@";
+		notify-send "$@ Finished Running"
+	fi
+}
+
 ################### General shortcuts #################################
 alias v="vim"
 alias vi="vim"
