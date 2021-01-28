@@ -6,7 +6,7 @@ bindkey -v
 zstyle :compinstall filename '/home/lee/.zshrc'
 
 autoload -U colors && colors
-PS1="%{$fg[cyan]%}%~%{$fg[blue]%}$%b "
+PS1="%{$fg[yellow]%}%m%{$fg[green]%}|%{$fg[cyan]%}%~%{$fg[blue]%}$%b "
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
