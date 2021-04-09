@@ -1,0 +1,9 @@
+setxkbmap -option ctrl:nocaps
+xcape -e 'Control_L=Escape'
+
+xinput set-prop 11 325 1
+xinput set-prop 11 307 1
+xinput set-prop 9 325 1
+xinput set-prop 9 307 1
+
+libinput-gestures-setup start
