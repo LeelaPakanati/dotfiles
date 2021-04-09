@@ -5,6 +5,8 @@ setopt appendhistory autocd extendedglob notify
 bindkey -v
 zstyle :compinstall filename '/home/lee/.zshrc'
 
+export TERM=xterm-256color
+
 autoload -U colors && colors
 PS1="%{$fg[yellow]%}%m%{$fg[green]%}|%{$fg[cyan]%}%~%{$fg[blue]%}$%b "
 
