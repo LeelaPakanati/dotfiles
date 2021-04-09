@@ -1,0 +1,7 @@
+#!/bin/sh
+
+notify-send.py "Display Profile: " "$AUTORANDR_CURRENT_PROFILE" \
+               --hint string:image-path:video-display \
+               -a "Display Config"
+
+next_background
