@@ -67,7 +67,14 @@ alias v="vim"
 alias vi="vim"
 alias r="ranger"
 
+#alias vsim="/opt/intelFPGA_pro/18.1/modelsim_ae/bin/vsim"
+#alias qsim="/opt/questa/questasim/bin/vsim"
+#export PATH=/opt/questa/2020_4/questasim/bin/:$PATH
+#alias vivado="/home/lpakanati/bin/vivado.sh"
+alias vsim="/home/lpakanati/bin/vsim"
+
 ############### Overwrite regular commands w/ options#################555~C~#
+alias cd="cd -P"
 alias apt="sudo apt"
 alias please="sudo"
 #alias python="python3"
@@ -78,6 +85,7 @@ alias sl="ls -hN --color=auto --group-directories-first"
 alias ccat="highlight --out-format=ansi"
 alias tree="tree -CF"
 alias pdflatex="pdflatex -halt-on-error"
+alias find="fdfind"
 
 ################## Git aliases #########################################
 function gpush {
@@ -100,33 +108,39 @@ alias greset1="git reset HEAD~1"
 alias gdiff="git diff"
 alias gpull="git pull"
 
-################## MEMES ####################################
-alias yeet="figlet This Bitch Empty"
-alias ah_shit="figlet here we go again"
-alias think="jp2a ~/think.jpg --grayscale" 
-alias stonks="jp2a ~/stonks.jpg"
-alias lc="ls | figlet | toilet --gay -f term"
-alias llc="ll | figlet | toilet --gay -f term"
-
 ##########TMUX and VIM Stuff#################################
 export VISUAL=vim
 export EDITOR="$VISUAL" 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/lee/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/lee/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/lee/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/lee/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+## >>> conda initialize >>>
+## !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/home/lee/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/home/lee/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/home/lee/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/home/lee/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+## <<< conda initialize <<<
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+
+export XILINXD_LICENSE_FILE="2100@chhq-vuplynx01"
+export LM_LICENSE_FILE="29000@ch2d-supdesql02:1717@chhq-vuplynx01"
+source /tools/Xilinx/Vivado/2023.1/settings64.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='fdfind --type file --hidden --no-ignore'
+export FZF_DEFAULT_OPTS="--preview='~/.vim/bundle/fzf.vim/bin/preview.sh {}'"
+alias vf='vim $(fzf)'
+
+export INTELFPGAOCLSDKROOT="/root/intelFPGA_pro/21.4/hld"
+
+export QSYS_ROOTDIR="/opt/intelFPGA/21.1/quartus/sopc_builder/bin"

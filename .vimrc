@@ -23,19 +23,6 @@
 "               VIM-based naviagion - need to reconfigure
 "               other tools to work with IJKL
 "
-"   Tab/Split Workflow:
-"       Due to Vim's notion of 'splits within tabs'
-"       instead of the 'tabs within splits' that I prefer,
-"       I don't use splits in my workflow, I instead just 
-"       use different tmux panes for each 'split'
-"
-"       Pros:
-"           It's what I like
-"
-"       Cons:
-"           Must use tmux copy for copy between splits
-"           instead of vim yank
-"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " change leader to ","
 let mapleader = ","
@@ -52,19 +39,25 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'francoiscabrol/ranger.vim'
-Plugin 'lervag/vimtex'
-Plugin 'honza/vim-snippets'
-" Plugin 'SirVer/ultisnips'
-Plugin 'KeitaNakamura/tex-conceal.vim'
-Plugin 'voldikss/vim-floaterm'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+"Plugin 'prabirshrestha/vim-lsp'
+Plugin 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+"Plugin 'prabirshrestha/asyncomplete.vim'
+"Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 call vundle#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+source ~/.vimextras/lsp.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 "               Cursed Navigation
@@ -86,48 +79,6 @@ noremap <C-u> u
 imap <C-u> <C-w>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""" Tabs: like chrome/sublime:"""""""""""""""
-nnoremap <C-t> :tabnext<CR> 
-nnoremap <C-o> :RangerCurrentDirectoryNewTab<CR>
-nnoremap <C-n> :tabnew 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""Syntastic - linter""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-
-"-- disable linter by default, turn on w/ <leader>s
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <leader>s :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""Useful Shortcuts""""""""""""""""""""""
-"-- toggle minimap w/ <leader>m
-nnoremap <leader>m :MinimapToggle<CR>
-
-"-- Y to copy to end of line
-nnoremap Y y$
-
-" Fast 
-nnoremap <leader>w :w!<CR>
-
-" Fast quitting
-nnoremap <leader>q :q<CR>
-nnoremap <leader>Q :q!<CR>
-nnoremap <leader>x :x<CR>
-
-nnoremap <leader>h :set hlsearch! is! hlsearch?<CR>
-
-nnoremap <leader>default :so ~/.defaultnav.vim
-
-set pastetoggle=<leader>p
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """"""""""""""""General Vim Setup""""""""""""""""""""""""
 " typing behavior
 set cursorline
@@ -137,6 +88,7 @@ set expandtab
 set softtabstop=4
 set scrolloff=15
 set number
+set switchbuf=newtab
 
 set nocompatible
 syntax on
@@ -164,26 +116,78 @@ set completeopt-=preview
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""Hybrid Relative Line Number""""""""""""""""""""""""""
-:set number relativenumber
+set number relativenumber
 
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * set norelativenumber
+augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""Floating Terminal""""""""""""""""
-noremap <leader>t :FloatermToggle<CR>
+""""""""""""" Tabs: like chrome/sublime:"""""""""""""""
+nnoremap <C-t> :tabnext<CR> 
+nnoremap <C-o> :RangerCurrentDirectoryNewTab<CR>
+nnoremap <C-n> :tabnew 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""" Split current buffer into split and navigate"""""
+nnoremap <C-h> :sp<CR>
+nnoremap <C-i> <C-W>k
+nnoremap <C-k> <C-W>j
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""Being Extra"""""""""""""""""""""
+" handling typos
+source ~/.vimextras/typos.vim
+source ~/.vimextras/comments.vim
 """""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""LaTeX setup""""""""""""""""""""
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
-"""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""Useful Shortcuts""""""""""""""""""""""
+"-- toggle minimap w/ <leader>m
+nnoremap <leader>m :MinimapToggle<CR>
+
+"-- Y to copy to end of line
+nnoremap Y y$
+"-- C-c copy to systemc cipboard
+vmap <C-c> "+y
+
+" Fast save
+nnoremap <leader>w :w!<CR>
+
+" Fast quitting
+nnoremap <leader>q :q<CR>
+nnoremap <leader>Q :q!<CR>
+nnoremap <leader>x :x<CR>
+
+nnoremap <leader>h :set hlsearch! is! hlsearch?<CR>
+
+" nnoremap <leader>default :so ~/.defaultnav.vim<CR>
+
+set pastetoggle=<leader>p
+
+nnoremap <leader>/ :call ToggleComment()<CR>
+
+nnoremap <leader>d yy:call ToggleComment()<CR><ESC>p
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""VIM Futitive for GIT"""""""""""""""""""""""
+let g:fzf_action = {
+  \ 'ctrl-m': 'tabedit',
+  \ 'ctrl-o': 'e',
+  \ 'ctrl-t': 'tabedit',
+  \ 'ctrl-h':  'botright split',
+  \ 'ctrl-v':  'vertical botright split' }
+nnoremap <C-g> :Files<CR>
+nnoremap <C-f> :Ag!<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""VIM Futitive for GIT"""""""""""""""""""""""
+let g:gitgutter_enabled  =0
+nnoremap <leader>gs :G<CR>
+nnoremap <leader>gg :GitGutterToggle<CR>
+nnoremap <leader>gh :GitGutterStageHunk<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""snippets setup"""""""""""""
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -191,27 +195,15 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 """""""""""""""""""""""""""""""""""""""""""
 
-""""""netrw browser settings"""""""""""""""
-" no longer using netrw -> see ranger plugin
-"let g:netrw_banner=0
-"let g:netrw_banner_split=4
-"let g:netrw_altv=1
-"let g:netrw_lifestyle=3
-"let g:netrw_list_hide=netrw_gitignore#Hide()
-"""""""""""""""""""""""""""""""""""""""""""
-
 """"""""""find files"""""""""""""""""""""""
 set path+=**
 set wildmenu
 """""""""""""""""""""""""""""""""""""""""""
-"""""""""""Being Extra"""""""""""""""""""""
-" handling typos
-source ~/.vimextras/typos.vim
-"""""""""""""""""""""""""""""""""""""""""""
-
 """""""""""ETC"""""""""""""""""""""""""""""
 let g:ranger_map_keys = 0
 let g:livepreview_previewer = 'zathura'
+"let g:lsp_fold_enabled = 0
+"let g:lsp_semantic_enabled = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 

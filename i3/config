@@ -3,13 +3,15 @@
 #
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
-#
+
+exec setxkbmap -option 'caps:ctrl_modifier'
+exec xcape -e 'Caps_Lock=Escape'
 
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -28,14 +30,14 @@ font pango:monospace 8
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+exec nm-applet
 
 #set screen
-exec --no-startup-id next_background
-exec --no-startup-id xcompmgr
+exec next_background
+exec xcompmgr
 
 #start notification service
-exec dunst
+exec dunst -idle_threshold 0
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -48,7 +50,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -95,8 +97,6 @@ bindsym $mod+t split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -106,7 +106,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -162,16 +162,16 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-bindsym $mod+Mod1+j resize shrink width 5 px or 5 ppt
-bindsym $mod+Mod1+k resize grow height 5 px or 5 ppt
-bindsym $mod+Mod1+i resize shrink height 5 px or 5 ppt
-bindsym $mod+Mod1+l resize grow width 5 px or 5 ppt
+bindsym $mod+Mod4+j resize shrink width 5 px or 5 ppt
+bindsym $mod+Mod4+k resize grow height 5 px or 5 ppt
+bindsym $mod+Mod4+i resize shrink height 5 px or 5 ppt
+bindsym $mod+Mod4+l resize grow width 5 px or 5 ppt
 
 # same mod+Alt+bndings, but for the arrow keys
-bindsym $mod+Mod1+Left resize shrink width 5 px or 5 ppt
-bindsym $mod+Mod1+Down resize grow height 5 px or 5 ppt
-bindsym $mod+Mod1+Up resize shrink height 5 px or 5 ppt
-bindsym $mod+Mod1+Right resize grow width 5 px or 5 ppt
+bindsym $mod+Mod4+Left resize shrink width 5 px or 5 ppt
+bindsym $mod+Mod4+Down resize grow height 5 px or 5 ppt
+bindsym $mod+Mod4+Up resize shrink height 5 px or 5 ppt
+bindsym $mod+Mod4+Right resize grow width 5 px or 5 ppt
 
 #---Basic Definitions---# #
 smart_borders on
@@ -186,16 +186,16 @@ bindsym $mod+g			gaps inner current minus 5
 
 bindsym $mod+b			bar mode toggle
 bar {
-	height 12
+	height 16
 	position top
 	mode hide
-	modifier Mod4
+	modifier $mod
 	tray_output primary
 
 	separator_symbol "|"
 
-	font pango:DejaVu Sans Mono, FontAwesome 10
-	status_command /usr/bin/i3status-rs /home/lee/.config/i3/status.toml
+	font pango:DejaVu Sans Mono, FontAwesome 9
+	status_command /home/lpakanati/.cargo/bin/i3status-rs /home/lpakanati/.config/i3/status.toml
 	colors {
 		separator #666666
 			background #222222
@@ -211,3 +211,4 @@ bar {
 #bindsym $mod+a			exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
 bindsym $mod+Shift+s	exec --no-startup-id spectacle
 bindsym $mod+x			exec --no-startup-id power_menu
+bindsim $mod+w          exec google-chrome
